@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Directory Paths</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Directory Paths</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>File Systems</h2>
+
+        <p>A typical operating system &mdash; all the instructions which make a computer run &mdash; includes <em>millions</em> of individual files.</p>
+
+        <p>How does a computer? human? keep the information organized?</p>
+      </section>
+
+
+      <section>
+        <h2>Flat File Systems</h2>
+
+        <p>Older computers used <em>flat file systems</em>. Each file had a different name stored in the same location.</p>
+
+        <p>This was slow and ineffective. Computers had to read the entire storage media to find a file.</p>
+
+        <p>(Some older machines only had 4k (four-trillionths of a TB!) of storage, so it may not have seemed like an issue then.)</p>
+      </section>
+
+
+      <section>
+        <h2>Hierarchical File Systems</h2>
+
+        <p>Modern computers rely on a <em>hierarchical file systems</em> which group similar files in a tree-like structure.</p>
+
+        <p>The system relies on the use of <em>drives</em> and <em>directories</em> to organize files.</p>
+      </section>
+
+
+      <section>
+        <h2>Hierarchical File Tree</h2>
+
+        <p>Each rectangle is a directory and (presumably) contains files.</p>
+
+        <img src="img/07-file-system-tree.svg" alt="File Tree" />
+      </section>
+
+
+      <section>
+        <h2>How it looks in a Graphical User Interface (GUI)</h2>
+
+        <img src="img/07-file-system-tree-gui.png" alt="File Tree (GUI)" />
+      </section>
+
+
+      <section>
+        <h2>Describing directory paths</h2>
+
+        <p><code>/</code> (root directory)</p>
+
+        <p><code>/bin</code></p>
+
+        <p><code>/usr/quorra</code></p>
+
+        <p><code>/usr/flynn/photos</code></p>
+      </section>
+
+
+      <section>
+        <h2><code>/</code></h2>
+
+        <p>The <code>root</code> directory (a.k.a. <code>/</code> ) is the top-most directory of a file system.</p>
+
+        <p>It may also represent the highest level of a web site.</p>
+
+        <p>Using a file cabinet as an example, <code>root</code> would be the filing cabinet itself, while the drawers (and folders within), would be directories which contain files.</p>
+      </section>
+
+
+      <section>
+        <h2>Current &amp; Previous Directories</h2>
+
+        <p>When we need to move around the file tree, we can use shorthand to denote current and previous directories:</p>
+
+        <p><strong>Current Directory:</strong> <code>.</code> (a single period)</p>
+
+        <p><strong>Previous Directory:</strong> <code>..</code> (two periods)</p>
+      </section>
+
+
+      <section>
+        <h2>Absolute Paths</h2>
+
+        <ul>
+          <li>starts from the <code>root</code> directory</li>
+          <li>a slash (<code>/</code>) always begins the start of the path</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Describing an Absolute Path</h2>
+
+        <p>If we wanted to access the directory containing Flynn's photos (from any other directory) we would write:</p>
+
+        <p><code>/usr/flynn/photos</code></p>
+
+        <img src="img/07-file-system-tree.svg" alt="File Tree" />
+      </section>
+
+
+      <section>
+        <h2>Relative Paths</h2>
+
+        <ul>
+          <li>points to a directory or filename in the <em>current working directory</em></li>
+          <li>does not start with a slash (<code>/</code>)</li>
+          <li>utilizes directory shorthand</li>
+          <li>used in programming due to portability</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Describing a Relative Path</h2>
+
+        <p>If we wanted to access the <code>bin</code> directory (from <code>/usr/flynn/photos</code>) we would write:</p>
+
+        <p><code>../../../bin</code></p>
+
+        <img src="img/07-file-system-tree.svg" alt="File Tree" />
+      </section>
+    </main>
+
+    <footer>
+      <p><a href="index.html">&laquo; Course Notes</a></p>
+    </footer>
+  </body>
+</html>
