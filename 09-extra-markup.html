@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Extra Markup</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Extra Markup</h1>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>Hidden Properties</h2>
+
+        <p>You may have noticed: HTML elements take up space.</p>
+
+        <p>Elements can be described as being <em>block</em> or <em>inline</em>.</p>
+      </section>
+
+
+      <section>
+        <h2>Block Elements</h2>
+
+        <ul>
+          <li>take up the entire width made available to them</li>
+          <li>begin on and create new lines</li>
+          <li>may contain other block or inline elements</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Inline Elements</h2>
+
+        <ul>
+          <li>only take up the space within their surrounding tags</li>
+          <li>do not begin on or create lines</li>
+          <li>may only contain other inline elements</li>
+        </ul>
+      </section>
+
+
+      <!-- section class="clearfix">
+        <h2>Elephants &amp; Snakes</h2>
+
+        <p>Block elements should not go inside inline elements...</p>
+
+        <img src="img/09-elephant-snake.png" alt="A weird example of putting a block element inside an inline element -- bad!" class="resized" />
+
+        <p class="inline-right">... just like elephants do not belong inside snakes.</p>
+      </section -->
+
+
+      <section>
+        <h2>Block or Inline?</h2>
+
+        <p>Developer tools provide a way to determine whether an element is block or inline.</p>
+
+        <p><strong>Chrome:</strong> View > Developer > Developer Tools (Select "Elements" tab)</p>
+
+        <p><strong>Firefox:</strong> Tools > Web Developer > Toggle Tools (Select "Inspector" tab)</p>
+
+        <ul>
+          <li>With the Element Selector tool, hover over content on the page.</li>
+          <li>Hover over an element in the source code portion of Dev Tools.</li>
+        </ul>
+
+        <p>In both cases, a visual cue will appear to show whether the element takes up 100 percent of the space available to it (<em>block</em>), or just the space it needs (<em>inline</em>).</p>
+      </section>
+
+
+      <section>
+        <h2><code>id</code> &amp; <code>class</code></h2>
+
+        <p>Global attributes which can be used with any element. These are used in styling and interaction when elements alone are not enough.</p>
+      </section>
+
+
+      <section>
+        <h2><code>id</code></h2>
+
+        <ul>
+          <li>makes an element unique</li>
+          <li>can be used only <strong>once</strong></li>
+        </ul>
+
+        <pre class="code">&lt;section id="preamble"&gt;</pre>
+      </section>
+
+
+      <section>
+        <h2><code>class</code></h2>
+
+        <ul>
+          <li>used to group similar elements</li>
+          <li>can be used <strong>multiple</strong> times</li>
+          <li>can use multiple values (separated by spaces)</li>
+        </ul>
+
+        <pre class="code">&lt;section class="branches-of-gov highlighted"&gt;</pre>
+      </section>
+
+
+      <section>
+        <h2>Using <code>id</code> and <code>class</code></h2>
+
+        <p>Values should:</p>
+        <ul>
+          <li>start with a letter or underscore</li>
+          <li>be lowercase</li>
+          <li>provide context</li>
+        </ul>
+
+        <p>Be careful of overuse. If you can apply styling or interaction by only referring to an element, do that first. If more detail is necessary to single out one element or group several elements, then consider using <code>id</code> or <code>class</code>.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p><a href="index.html">&laquo; Course Notes</a></p>
+    </footer>
+  </body>
+</html>

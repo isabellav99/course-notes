@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Introduction to CSS</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Introduction to CSS</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>What is CSS?</h2>
+
+        <p>CSS stands for <em>Cascading Style Sheets</em>.</p>
+
+        <p>It is a language used to describe the presentation of markup.</p>
+      </section>
+
+
+      <section>
+        <h2>Presenting Media</h2>
+
+        <p>CSS is predominantly used for visual styling. It may be used to present markup for:</p>
+
+        <ul>
+          <li>print</li>
+          <li>handheld devices</li>
+          <li>television</li>
+          <li>projectors</li>
+          <li>speech</li>
+          <li>braille</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Why CSS?</h2>
+
+        <ul>
+          <li>design consistency</li>
+          <li>avoids duplication</li>
+          <li>allows for site-wide changes in one place</li>
+          <li>faster page downloads</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Using CSS</h2>
+
+        <ul>
+          <li>inline styles</li>
+          <li>the <code>&lt;style&gt;</code> tag</li>
+          <li>external style sheet</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Inline Styles</h2>
+
+        <p><code>style</code> is a global attribute. Adding this attribute to a tag results in presentation becoming "hard-coded" in HTML.</p>
+
+        <p><strong>DO NOT</strong> use inline styles.</p>
+
+        <p>Its use contradicts the benefits of CSS.</p>
+      </section>
+
+
+      <section>
+        <h2><code>&lt;style&gt;</code></h2>
+
+        <p>Styles can be defined within the <code>&lt;head&gt;</code> of a document. This is good for quickly prototyping a design.</p>
+
+        <p><strong>DO NOT</strong> publish site which uses a <code>&lt;style&gt;</code> tag in HTML documents.</p>
+
+        <p>Its use contradicts the benefits of CSS.</p>
+      </section>
+
+
+      <section>
+        <h2>External Style Sheets</h2>
+
+        <p>CSS can be stored in its file.</p>
+
+        <p>Within the <code>&lt;head&gt;</code> of each HTML file, link to this single, central file.</p>
+
+        <pre class="code">&lt;link href="css/style.css" rel="stylesheet" /&gt;</pre>
+
+        <p>All CSS rules in this file will apply to all HTML documents which link to it.</p>
+      </section>
+
+
+      <section>
+        <h2>Don't forget HTML!</h2>
+
+        <p>Before styling a web page, make sure you are working with valid HTML.</p>
+
+        <p>Mistakes in your HTML <em>will break your CSS</em>.</p>
+
+        <p>It is common to make tweaks to HTML as you style. Whenever making a change to HTML, re-validate the page to make sure no errors have been introduced.</p>
+      </section>
+
+
+      <section>
+        <h2>A Scenario</h2>
+
+        <p>You maintain a web site of 1,000 pages. In every HTML page, you include:</p>
+
+        <ul>
+          <li>presentational elements</li>
+          <li>inline styles which set every &lt;p&gt; to display in <span style="font-family:'Helvetica'; color: limegreen;">Helvetica and lime green</span>.</li>
+        </ul>
+
+        <p>Your boss wants a redesign. You now have to search through all pages and every paragraph to make the changes.</p>
+      </section>
+
+
+      <section>
+        <h2>There goes your weekend</h2>
+
+        <p>Will you find every instance?</p>
+
+        <p>Will you break the site by deleting tags?</p>
+
+        <p>What if more changes are requested?</p>
+      </section>
+
+
+      <section>
+        <h2>Presentation, separate from structure</h2>
+
+        <p>By linking to one file with the entire site's style guide, when a change is requested (or necessary), it wil be applied to every page on the site.</p>
+      </section>
+
+
+      <section>
+        <h2>CSS Blocks</h2>
+
+        <p>This is a CSS block:</p>
+
+        <p><code>selector { property: value; }</code></p>
+      </section>
+
+
+      <section>
+        <h2>Selectors</h2>
+
+        <p>The selector identifies the part of our HTML to be styled.</p>
+
+        <ul>
+          <li><strong>type</strong> (<code>body</code>, <code>p</code>, <code>abbr</code>)</li>
+          <li><strong>id</strong> (<code>#preamble</code>)</li>
+          <li><strong>class</strong> (<code>.branches-of-gov</code>)</li>
+          <li><strong>descendant</strong> (<code>nav li</code>)</li>
+          <li>child (<code>ul &gt; li</code>)</li>
+          <li>adjacent sibling (<code>h1 + p</code>)</li>
+          <li>general sibling (<code>p ~ p</code>)</li>
+          <li>attribute (<code>abbr[title]</code>)</li>
+        </ul>
+
+        <p>The four selectors in bold are the most commonly used.</p>
+
+      </section>
+
+
+      <section>
+        <h2>Declaration</h2>
+
+        <p>A declaration (enclosed within the curly braces <code>{ }</code>) is comprised of a <em>property</em> and <em>value</em>, ended by a semi-colon (<code>;</code>).</p>
+
+        <pre class="code">selector { property: value; }</pre>
+
+        <p>A selector can have multiple declarations.</p>
+
+        <pre class="code">selector {<br/>  property: value;<br/>  property2: value2;</br>}</pre>
+      </section>
+
+
+      <section>
+        <h2>Properties &amp; Values</h2>
+
+        <p>A property and its value are separated by a colon (<code>:</code>).</p>
+
+        <p>There are <a href="http://www.htmldog.com/references/css/properties/">hundreds! of properties</a>. Values depend on the property.</p>
+      </section>
+
+    </main>
+
+    <footer>
+      <p><a href="index.html">Course Notes</a></p>
+    </footer>
+  </body>
+</html>
