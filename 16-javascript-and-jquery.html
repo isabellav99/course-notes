@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>JavaScript &amp; jQuery</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>JavaScript &amp; jQuery</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>JavaScript</h2>
+
+        <ul>
+          <li>the secret sauce of web interactivity</li>
+          <li>introduced in Netscape Navigator 2.0 (1995)</li>
+          <li>commonly used for client-side (browser) scripts</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>jQuery</h2>
+
+        <ul>
+          <li>a library written in JavaScript which simplifies web interaction</li>
+          <li>provides a standard way of working with multiple/older browsers</li>
+          <li>includes a large ecosystem of add-on libraries, plugins</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Using jQuery</h2>
+
+        <ul>
+          <li>use the 'compressed' version</li>
+          <li>load the libary in HTML
+            <ul>
+              <li>include the file on your web server</li>
+              <li>linked to a Content Delivery Network (CDN)</li>
+            </ul>
+          </li>
+          <li>include plugins or custom scripts
+            <ul>
+              <li>embedded using the <code>&lt;script&gt;</code> tag</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Adding jQuery to HTML</h2>
+
+        <p>If the library is on your server:</p>
+
+        <pre class="code">&lt;script src="js/jquery-1.11.3.min.js"&gt;&lt;/script&gt;</pre>
+
+        <p>If linked from a CDN:
+
+        <pre class="code">&lt;script src="https://code.jquery.com/jquery-3.3.1.min.js"&gt;<br/>&lt;/script&gt;</pre>
+
+        <p><small>Note: A link to a page with approved CDNs are included in the example README.</small></p>
+      </section>
+
+
+      <section>
+        <h2>Adding Scripts</h2>
+
+        <p>jQuery requires a page to be fully loaded before it can work.</p>
+
+        <p>Place scripts at the bottom of a page, just inside the closing <code>&lt;/body&gt;</code> tag.
+
+        <pre class="code">  ...<br/>  &lt;script src="js/jquery-3.3.1.js"&gt;&lt;/script&gt;<br/>  &lt;script src="js/my-script.js"&gt;&lt;/script&gt;<br/>&lt;/body&gt;</pre>
+      </section>
+
+
+      <section>
+        <h2>Order Matters</h2>
+
+        <p>When using plugins, list them in the following order:</p>
+
+        <ol>
+          <li>jQuery library</li>
+          <li>plugin libraries</li>
+          <li>plugin-related settings</li>
+          <li>your custom scripts</li>
+        </ol>
+      </section>
+
+    </main>
+
+    <footer>
+      <p><a href="index.html">Course Notes</a></p>
+    </footer>
+  </body>
+</html>
