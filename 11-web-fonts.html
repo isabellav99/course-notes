@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Web Fonts</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Fonts</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Styling Text</h2>
+
+        <p>Simply changing a typeface can improve the effectiveness of a design.</p>
+
+        <p>With web fonts, designers have access to a greater selection of fonts and can craft a meaningful and effective visual message.</p>
+      </section>
+
+
+      <section>
+        <h2>Fonts in CSS</h2>
+
+        <p>There are three ways to specify fonts in CSS:</p>
+
+        <ul>
+          <li>generic styles</li>
+          <li>user fonts</li>
+          <li>web fonts</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Generic Styles</h2>
+
+        <p>Instead of picking a specific typeface, we can choose from one of five generic styles which are determined by browser settings:</p>
+
+        <ul style="line-height: 1.75">
+          <!-- REMEMBER: DO NOT use inline styles! -->
+          <li><span style="font-family: serif;">serif</span></li>
+          <li><span style="font-family: sans-serif;">sans-serif</span></li>
+          <li><span style="font-family: monospace;">monospace</span></li>
+          <li><span style="font-family: cursive;">cursive</span></li>
+          <li><span style="font-family: fantasy;">fantasy</span></li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Generic Styles: Example</h2>
+
+        <pre class="code">p {<br/>  font-family: serif;<br/>}</pre>
+      </section>
+
+
+      <section>
+        <h2>User Fonts</h2>
+
+        <p>The fonts on a users' computer allow us to provide a more tailored design. The typefaces installed on a user's machine may vary.</p>
+
+        <p>We can specify primary, secondary and generic choices in our <strong>font stack</strong>, which offer a fallback if a user does not have a specific font installed.</p>
+      </section>
+
+
+      <section>
+        <h2>User Fonts: Example</h2>
+
+        <pre class="code">p {<br/>  font-family: "Andale Mono", "Courier New", monospace;<br/>}</pre>
+
+        <p>The name of a user font must be enclosed in quotes.</p>
+
+        <p>Commas separate each font.</p>
+
+        <p>Always specify a generic fallback in case the first choices are unavailable.</p>
+      </section>
+
+
+      <section>
+        <h2>Web Fonts</h2>
+
+        <p>CSS3 introduced the <code>@font-face</code> property, which imports typefaces hosted on our own server or in the cloud.</p>
+
+        <p>This development provides designers with thousands of choices.</p>
+      </section>
+
+
+      <section>
+        <h2>Adjusting to Web Fonts</h2>
+
+        <p>Web fonts are relatively new, so the industry is still adjusting to them. Their use is commonplace, but there are caveats:</p>
+
+        <ul>
+          <li>not all browsers support the same file format</li>
+          <li>not all font foundries have licensed fonts for web use</li>
+          <li>fonts hosted in the cloud may load slowly (or not at all)</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Where to Find Web Font</h2>
+
+        <p><a href="http://fonts.google.com">Google Fonts</a> provides open source fonts and free hosting!</p>
+
+        <p><a href="http://www.fontsquirrel.com/fonts/list/find_fonts?filter%5Blicense%5D%5B0%5D=web">Font Squirrel</a> offers web fonts for download to be hosted on your site.</p>
+
+        <p><a href="https://www.fonts.com/">Fonts.com</a>, <a href="http://www.typography.com/">Typography.com</a> and <a href="https://typekit.com/">Adobe TypeKit</a> offer pay/subscription services.</p>
+
+        <p><small>(For this course, stick to a free/open-source option.)</small></p>
+      </section>
+
+
+      <section>
+        <h2>I like font X. Can I use it on the web?</h2>
+
+        <p>Technically, any font can be transformed into a web font.</p>
+
+        <p>However, many typefaces do not include licenses which permit Web use.</p>
+
+        <p>Before using any font on the web, be sure the license permits you to do so.</p>
+
+        <p><small> (To use a font on the Web without the permission of its foundry would be akin to stealing.)</small></p>
+      </section>
+
+
+      <section>
+        <h2>Google Fonts</h2>
+
+        <p><a href="https://fonts.google.com">Google Fonts</a> offers 900-plus open-source fonts for use.</p>
+
+        <ol>
+          <li>Click the red circle within a typeface's box to add it to your collection.</li>
+          <li>Click the <strong>Family Selected</strong> tab in the bottom right to display options.</li>
+          <li>Under <strong>Customize</strong> choose the font weights you wish to use.</li>
+          <li>Under <strong>Embed</strong>, select <strong>@import</strong>.</li>
+          <li>Copy the line which begins with <code>@import</code>. Do not include the <code>&lt;style&gt;</code> tags. Add this to the very top of your CSS file.</li>
+          <li>Under <strong>Specify in CSS</strong>, copy the <code>font-family</code> declaration. Add this to the CSS block in which you want to change a font.</li>
+        </ol>
+
+        <p>Always specify a fallback in case Google Fonts fails to load.</p>
+      </section>
+
+      <section>
+        <h2>Google Fonts: Example</h2>
+
+        <pre class="code">@import<br/>  'https://fonts.googleapis.com/css?family=Open+Sans';<br/><br/>body {<br/>  font-family: "Open Sans", sans-serif;<br/>}</pre>
+      </section>
+
+    </main>
+
+    <footer>
+      <p><a href="index.html">Course Notes</a></p>
+    </footer>
+
+  </body>
+</html>

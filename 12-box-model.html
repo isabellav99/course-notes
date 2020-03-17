@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>CSS: Box Model</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>CSS: Box Model</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Box Model</h2>
+
+        <p>Every block element includes the following components:</p>
+
+        <ul>
+          <li>content</li>
+          <li>padding</li>
+          <li>border</li>
+          <li>margin</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Visualizing the Box Model</h2>
+
+        <p>It looks a little something like this:</p>
+
+        <img src="img/12-box-model-firefox.png" alt="Box Model Example" class="resized" />
+
+        <p>In Chrome Dev Tools, an element's <strong>content</strong> appears in blue; <strong>padding</strong> in green; <strong>border</strong> in yellow; and <strong>margin</strong> in orange.</p>
+      </section>
+
+
+      <section>
+        <h2>Padding</h2>
+
+        <p>Padding is the space between content and a border.</p>
+
+        <p>It is specified using the following properties:</p>
+
+        <ul>
+          <li><code>padding-top</code></li>
+          <li><code>padding-right</code></li>
+          <li><code>padding-bottom</code></li>
+          <li><code>padding-left</code></li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Border</h2>
+
+        <p>A border appears between padding and margin.</p>
+
+        <p>It always requires the following components:</p>
+
+        <ul>
+          <li><code>width</code></li>
+          <li><code>style</code></li>
+          <li><code>color</code></li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Border Properties</h2>
+
+        <p>A border can be specified using a combination of the following properties:</p>
+
+        <ul>
+          <li><code>border-top-width</code></li>
+          <li><code>border-top-style</code></li>
+          <li><code>border-top-color</code></li>
+          <li><code>border-right-width</code></li>
+          <li><code>border-right-style</code></li>
+          <li><code>border-right-color</code></li>
+          <li><code>border-bottom-width</code></li>
+          <li><code>border-bottom-style</code></li>
+          <li><code>border-bottom-color</code></li>
+          <li><code>border-left-width</code></li>
+          <li><code>border-left-style</code></li>
+          <li><code>border-left-color</code></li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Margin</h2>
+
+        <p>Margin encloses content, padding and border, and separates the element from other elements.</p>
+
+        <p>It can be specified using the following properties:</p>
+
+        <ul>
+          <li><code>margin-top</code></li>
+          <li><code>margin-right</code></li>
+          <li><code>margin-bottom</code></li>
+          <li><code>margin-left</code></li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>An Analogy</h2>
+
+        <p>Think of picture frames on a wall.</p>
+
+        <p>The image is <em>content</em>. The matte is <em>padding</em>. The frame is a <em>border</em>. The space separating the frames from others is the <em>margin</em>.</p>
+
+        <img src="img/12-framed-images.jpg" alt="Tessellation Gallery by Ella T. (Flickr)" class="resized" />
+      </section>
+
+
+      <section>
+        <h2>Shorthand</h2>
+
+        <p>Can you imagine having to write 20 properties just to define how the padding, border and margin should appear?</p>
+
+        <p>CSS recognizes <em>shorthand</em> properties, which take the order of values given and applies them to the appropriate edge.</p>
+
+        <p>Shorthand property for the box model are:</p>
+
+        <ul>
+          <li><code>padding</code></li>
+          <li><code>border</code>
+            <ul>
+              <li><code>border-top</code></li>
+              <li><code>border-right</code></li>
+              <li><code>border-bottom</code></li>
+              <li><code>border-left</code></li>
+            </ul>
+          </li>
+          <li><code>margin</code></li>
+        </ul>
+
+        <p><small>There are shorthand properties for <code>background</code> and <code>font</code>, too!</small></p>
+      </section>
+
+
+      <section>
+        <h2>Shorthand Values</h2>
+
+        <p>Up to four values may be specified with each property (<code>padding</code>, <code>margin</code>).</p>
+
+        <p>Shorthand values are represented in a clockwise order:</p>
+
+        <ul>
+          <li>top</li>
+          <li>right</li>
+          <li>bottom</li>
+          <li>left</li>
+        </ul>
+
+        <p>A mnemonic: "<em>Teddy Roosevelt, Bear Lover</em>"</p>
+
+      </section>
+
+
+      <section>
+        <h2>Shorthand Values &mdash; 4-Value Syntax</h2>
+
+        <p>The first value is applied to the top; second to the right; third to the bottom; and fourth to the left.</p>
+
+        <pre class="code">margin: 10px 20px 30px 20px;</pre>
+      </section>
+
+
+      <section>
+        <h2>Shorthand Values &mdash; 3-Value Syntax</h2>
+
+        <p>The first value is applied to the top; the second to the left and right; and the third to the bottom.</p>
+
+        <pre class="code">margin: 10px 20px 30px;</pre>
+      </section>
+
+
+      <section>
+        <h2>Shorthand Values &mdash; 2-Value Syntax</h2>
+
+        <p>The first value is applied to the top and bottom; the second is applied to the left and right.</p>
+
+        <pre class="code">margin: 20px 10px;</pre>
+      </section>
+
+
+      <section>
+        <h2>Shorthand Values &mdash; 1-Value Syntax</h2>
+
+        <p>A single value will be applied to all sides.</p>
+
+        <pre class="code">margin: 10px;</pre>
+      </section>
+
+
+      <section>
+        <h2>Shorthand for Borders</h2>
+
+        <p>Border shorthand requires information about <code>width</code>, <code>style</code> and <code>color</code>.</p>
+
+        <p>The following will apply a border to all sides of an element.</p>
+
+        <pre class="code">border: 1px solid #222;</pre>
+
+        <p>There is no directional shorthand for borders. The side is part of the property.</p>
+
+        <pre class="code">border-bottom: 1px solid #222;<br/>border-left: 1px solid #222;</pre>
+      </section>
+
+      <!--
+      <section>
+        <h2>Outlines</h2>
+      </section>
+      -->
+
+      <section>
+        <h2>Sizing Boxes</h2>
+
+        <p>Up to now, the space taken up by an element depends on:</p>
+
+        <ul>
+          <li>the content</li>
+          <li>whether an element is block or inline</li>
+          <li>the box model</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Dimensions</h2>
+
+        <p>Elements are not limited to having an exact width or height.</p>
+
+        <p>Minimums and maximums may also be declared to improve an element's responsiveness.</p>
+
+        <ul>
+          <li>width</li>
+          <li>max-width</li>
+          <li>min-width</li>
+          <li>height</li>
+          <li>max-height</li>
+          <li>min-height</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Overflow</h2>
+
+        <p>What if our content is greater in size than the dimensions provided for it?</p>
+
+        <p>An <code>overflow</code> value determines how the content is displayed within its parent element.</p>
+
+        <ul>
+          <li>visible</li>
+          <li>hidden</li>
+          <li>scroll</li>
+          <li>auto</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2><code>overflow: visible</code></h2>
+
+        <p>Content will be displayed, even if it exceeds the box's dimensions.</p>
+      </section>
+
+
+      <section>
+        <h2><code>overflow: hidden</code></h2>
+
+        <p>Content exceeding the box's dimensions will not be displayed.</p>
+      </section>
+
+
+      <section>
+        <h2><code>overflow: scroll</code></h2>
+
+        <p>Vertical and horizontal scroll bars will be added to the containing box.</p>
+
+        <p><small>(Different browsers and operating systems may treat this similarly to <code>auto</code>.)</small></p>
+      </section>
+
+
+      <section>
+        <h2><code>overflow: auto</code></h2>
+
+        <p>Vertical and/or horizontal scroll bars are added <em>if necessary</em>.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p><a href="index.html">Course Notes</a></p>
+    </footer>
+  </body>
+</html>
