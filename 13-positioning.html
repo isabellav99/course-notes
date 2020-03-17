@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Positioning</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Positioning</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Positioning</h2>
+
+        <p>Positioning is one technique used to for moving elements on a page.</p>
+
+        <p>The <code>position</code> property takes one of the following values:</p>
+
+        <ul>
+          <li>static</li>
+          <li>relative</li>
+          <li>fixed</li>
+          <li>absolute</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>static</h2>
+
+        <p>Every element has a default value of static.</p>
+
+        <p><code>position: static;</code> is used to adjust a design for another medium.</p>
+      </section>
+
+
+      <section>
+        <h2>relative</h2>
+
+        <p>An element can be positioned in relation to its normal position.</p>
+
+        <p>To move the element, specify:</p>
+
+        <ol>
+          <li><code>position: relative;</code></li>
+          <li>a horizontal (x-axis) property (<code>left</code> or <code>right</code>)</li>
+          <li>a vertical (y-axis) property (<code>top</code> or <code>bottom</code>)</li>
+        </ol>
+
+        <p>Use directional properties as needed. (If the element only needs to be moved on the x-axis, there is no need to include a y-axis property.)</p>
+
+        <p>Without directional properties, the element will note move (but it now has a magical quality which we will see later).</p>
+      </section>
+
+
+      <section>
+        <h2>fixed</h2>
+
+        <p>An element can be positioned in relation to the browser window.</p>
+
+        <p>To move the element, specify:</p>
+
+        <ol>
+          <li><code>position: fixed;</code></li>
+          <li>a horizontal (x-axis) property (<code>left</code> or <code>right</code>)</li>
+          <li>a vertical (y-axis) property (<code>top</code> or <code>bottom</code>)</li>
+        </ol>
+
+        <p>Use directional properties as needed.</p>
+      </section>
+
+
+      <section>
+        <h2>absolute</h2>
+
+        <p>An element position as absolute acts like a fixed element, but relative to the <em>nearest positioned ancestor</em>.</p>
+
+        <p>If its ancestors are static, the element will be positioned in relation to body.</p>
+
+        <p>To absolutely position an element:</p>
+
+        <ol>
+          <li>the containing element (ancestor) must be <code>position: relative;</code></li>
+          <li>the element to be moved is set to <code>position: absolute;</code></li>
+          <li>a horizontal (x-axis) property (<code>left</code> or <code>right</code>)</li>
+          <li>a vertical (y-axis) property (<code>top</code> or <code>bottom</code>)</li>
+        </ol>
+      </section>
+
+
+      <section>
+        <h2>z-index</h2>
+
+        <p>Positioned elements can also be controlled in three-dimensional space from front to back.</p>
+
+        <p>Higher <code>z-index</code> values will place an element closer to the front.</p>
+
+        <p><strong>Tip:</strong> increment <code>z-index</code> values by 5 or 10 in case you need to add another element in the future!</p>
+      </section>
+
+    </main>
+
+    <footer>
+      <p><a href="index.html">Course Notes</a></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Floats</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Floats</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>What is a float?</h2>
+
+        <p>The <code>float</code> property takes an element out of its normal flow by moving it left or right and wraps text or inline elements around it.</p>
+
+        <p>A floated element will be moved all the way to the left or right of its parent.</p>
+      </section>
+
+
+      <section>
+        <h2>Float values</h2>
+
+        <p><code>left</code> moves the element to the left of its containing block.</p>
+
+        <p><code>right</code> moves the element to the right of its containing block.</p>
+
+        <p><code>none</code> disables any floating. <small>(This is used to adjust a design for another medium.)</small></p>
+      </section>
+
+
+      <section>
+        <h2>Container Collapse</h2>
+
+        <p>When we float an element, the parent element collapses.</p>
+
+        <p>We can fix this by adding the following to the container's CSS block:</p>
+
+        <pre class="code">overflow: auto;<br/>height: auto;</pre>
+
+        <p>If the parent element has no specific height set, adding <code>height: auto;</code> is optional.</p>
+      </section>
+
+
+      <section>
+        <h2>Fixing white space</h2>
+
+        <p>Any content next to a floated element has no white space between it and the element.</p>
+
+        <p>Good design principles suggest we should fix this.</p>
+
+        <p>Add margin to the floated element.</p>
+
+        <p>(If the element is floated left, add margin to the right; if floated right, add margin to the left.)</small></p>
+      </section>
+
+
+      <section>
+        <h2>Clearing floats</h2>
+
+        <p>The <code>clear</code> property stops the effects of a float and re-establishes the normal flow of elements.</p>
+
+        <p>Add the it to the element which you want reestablish the normal flow.</p>
+
+        <p><code>left</code> stops a float to the left side.</p>
+
+        <p><code>right</code> stops a float to the right side.</p>
+
+        <p><code>both</code> stops floats to the left and/or right side.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p><a href="index.html">Course Notes</a></p>
+    </footer>
+  </body>
+</html>
