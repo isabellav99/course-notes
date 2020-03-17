@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Responsive Design</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Responsive Design</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Being Flexible</h2>
+
+        <p>Up to this point, you may have created web sites which are pixel-perfect. <abbr title="What you see is what you get.">WYSIWYG</abbr>.</p>
+
+        <p>The web is a fluid medium. We never know how a person may view our site, so we need to modify our designs to be flexible.</p>
+
+        <p>We should aim to design sites which look good on big and small screens alike.</p>
+      </section>
+
+
+      <section>
+        <h2>Think about media</h2>
+
+        <p>How does a web site differ from a mobile site?</p>
+
+        <p>Visit your favorite web sites on a desktop and a mobile device. Note the differences.</p>
+
+        <p>What is similar? What is different?</p>
+      </section>
+
+
+      <section>
+        <h2>Benefits of Responsive Design</h2>
+
+        <p>Responsive, fluid designs use one HTML file and adjust the styles based on the window/device size.</p>
+
+        <ul>
+          <li><a href="http://www.bostonglobe.com/">Boston Globe</a></li>
+          <li><a href="http://espn.go.com/">ESPN</a></li>
+          <li><a href="http://www.foxsports.com/florida">Fox Sports</a></li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2><code>@media</code> queries</h2>
+
+        <p><code>@media</code> queries allow a designer to specify styles based on conditions.</p>
+
+        <ul>
+          <li><code>device-height</code></li>
+          <li><code>device-width</code></li>
+          <li><code>height</code></li>
+          <li><code>orientation</code></li>
+          <li><code>resolution</code></li>
+          <li><code>width</code></li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Styling for Mobile</h2>
+
+        <p>Two components are necessary to adjust a design for mobile:</p>
+
+        <ul>
+          <li>a meta tag specifying viewport information</li>
+          <li>a style sheet which includes a <code>@media</code> query for a given breakpoint</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Styling for Mobile: HTML (step 1)</h2>
+
+        <p><code>&lt;meta name="viewport" content="width=device-width;
+          initial-scale=1;" /&gt;</code></p>
+
+        <p><strong>Without this tag, mobile designs will not work.</strong></p>
+      </section>
+
+
+      <section>
+        <h2>Maximum Scale</h2>
+
+        <p>Some mobile web tutorials suggest adding the following to the meta tag: <code>maximum-scale=1</code>.</p>
+
+        <p><strong>DO NOT</strong> include this attribute.</p>
+
+        <p>It disables the pinch-zoom feature on mobile devices, making the design less accessible.</p>
+      </section>
+
+
+      <section>
+        <h2>Styling for Mobile: HTML (step 2)</h2>
+
+        <p>Add a link to the mobile style sheet AFTER the style sheet for the web.</p>
+
+        <pre class="code">&lt;link href="css/mobile.css" rel="stylesheet"<br/>media="screen" /&gt;</pre>
+      </section>
+
+
+      <section>
+        <h2>Don't Be Fooled</h2>
+
+        <p>There is a media type: <code>handheld</code>. Today's mobile operating systems (iOS, Android) do not support it. Do not use it.</p>
+
+        <p>Apple and Google market their devices as being able to view the web — as-is — and disabled the use of the handheld media type.</p>
+
+        <p>(This is why the screen media type is used and we set widths and/or orientation to create designs for mobile.)</p>
+      </section>
+
+
+      <section>
+        <h2>Styling for Mobile: CSS</h2>
+
+        <p>Mobile styles should always come <em>after</em> the styles set for a desktop version.</p>
+
+        <p>It is generally a good idea to keep desktop, mobile styles separate.</p>
+
+        <p>Start a new mobile style sheet with the following:</p>
+
+        <pre class="code">@media (max-width: 320px) {<br/>  /* mobile styles go here! */<br/>}</pre>
+
+        <p><small><strong>Note:</strong> '320' may be any value.</small></p>
+      </section>
+
+
+      <section>
+        <h2>Modifying a Design for Mobile</h2>
+
+        <p>Mobile design involves overwriting CSS rules created for the web version of a site.</p>
+
+        <p>If you do not overwrite rules from your main (web) css file, the mobile version of the site will inherit those rules.</p>
+
+        <p>Do not start building a mobile version until you have finalized a web version.</p>
+      </section>
+
+
+      <section>
+        <h2>Transitioning a Design</h2>
+
+        <p>Different designs pose different challenges. Always think critically about a site's content, design.</p>
+
+        <ul>
+          <li>Increase font size</li>
+          <li>Remove floats, positioning (get everything in one column)</li>
+          <li>Hide elements not necessary for mobile</li>
+          <li>Add mobile-only content if necessary</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer>
+      <p><a href="index.html">Course Notes</a></p>
+    </footer>
+  </body>
+</html>
