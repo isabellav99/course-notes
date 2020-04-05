@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Grid</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Grid</h1>
+    </header>
+
+    <main>
+		  <section>
+        <h2>What is CSS Grid?</h2>
+
+        <p>Grid is a new display method which allows a designer to lay out elements in two dimensions (horizontally, vertically).</p>
+		  </section>
+
+      <section>
+        <h2>Grid Terminology</h2>
+
+        <img src="img/15-terminology.svg" alt="Grid terminology." />
+      </section>
+
+      <section>
+        <h2>Grid Terminology</h2>
+
+        <p>Grid <strong>lines</strong> define a grid. These are numbered and can be named.</p>
+
+        <p>Grid <strong>columns</strong> are what is built out horizontally; <strong>rows</strong> are built out vertically.</p>
+
+        <p>A grid <strong>area</strong> is a mix of columns and rows. They must always be squares/rectangles (no tetris — odd-shaped — pieces).</p>
+      </section>
+
+      <section>
+        <h2>Grid Lines</h2>
+
+        <img src="img/15-lines.svg" alt="Grid lines" />
+
+        <p>Grid <strong>lines</strong> are numbered starting at 1, left to right. Lines can <em>also</em> be identifies from right to left using negative numbers!</p>
+
+        <p>While the above graphic only shows line numbers for columns, the same concept applies for row lines.</p>
+      </section>
+
+      <section>
+        <h2>Grid Tools</h2>
+
+        <p>Once a grid has been defined in CSS, you can view it in the browser using Firefox's Web Developer Tools.</p>
+
+        <p>Go to Tools > Web Developer > Inspector.</p>
+
+        <p>In the right column, click Layout. Under the Grid section, click the checkbox on the element which has a grid to overlay the grid tools.</p>
+
+        <p>Additional settings exist to display line numbers and area names.</p>
+      </section>
+
+
+      <section>
+        <h2>Defining a Grid</h2>
+
+        <pre>main {<br/>  display: grid;<br/>  grid-template-columns: 300px 300px 300px;<br/>  grid-template-rows: 20px 20px;<br/>}</pre>
+
+        <p><small>NOTE: The grid here is being applied to <code>main</code>, but a grid can be applied to <em>any</em> selector!</small></p>
+      </section>
+
+      <section>
+        <h2>Defining a Grid, Part I</h2>
+
+        <p>To define a grid, set the <code>display</code> property to <code>grid</code>.</p>
+      </section>
+
+      <section>
+        <h2>Defining a Grid, Part II</h2>
+
+        <p>Next, define the width/height of your columns/rows using the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties. Each value defines a single column/row.</p>
+
+        <p>Unless you want rows to be a very specific size, defining a row is optional. The content will stretch the row to whatever size it needs.</p>
+      </section>
+
+      <section>
+        <h2>Content on a Grid</h2>
+
+        <p>What if you have more content than you have defined columns/rows? (For instance, five items to be placed in three columns.)</p>
+
+        <p>Content will always fill up the columns defined. When the row is complete, the remaining content will be placed on the next row.</p>
+      </section>
+
+      <section>
+        <h2>Explicit &amp; Implicit Grid</h2>
+
+        <p>When we use <code>grid-template-columns</code> and <code>grid-template-rows</code>, we create an <em>explicit</em> grid.</p>
+
+        <p>If our content exceeds those definitions, it will still be placed on the grid according to the dimensions we provided. This is the <em>implicit</em> grid.</p>
+      </section>
+
+      <section>
+        <h2>Applying Whitespace</h2>
+
+        <p>Use <code>grid-gap</code> to apply whitespace equally on columns and rows.</p>
+
+        <p>Whitespace can also be applied to just columns using <code>grid-column-gap</code> and to just rows using <code>grid-row-gap</code>.</p>
+      </section>
+
+      <section>
+        <h2><code>repeat()</code></h2>
+
+        If you are applying dimensions equally to columns/rows, there is a shorthand function which makes this easier:
+
+        <pre>grid-template-columns: repeat(3, 300px);</pre>
+
+        <p>The first value passed to repeat is the number of columns (in this case), the second value indicates the dimensions.</p>
+      </section>
+
+      <section>
+        <h2>Flexible Grids</h2>
+
+        <p>A new unit has been introduced for use with grid: fractional units (<code>fr</code>)!</p>
+
+        <p>The browser determines what the dimensions of the container are, subtracts whitespace, then divides the grid columns accordingly. For instance:</p>
+
+        <pre>main {<br/>  display: grid;<br/>  max-width: 960px;<br/>  grid-gap: 20px;<br/>  grid-template-columns: 1fr 1fr;<br/>}</pre>
+
+        <p>After subtracting 20px of whitespace, the browser will equally divide the remaining 940px equally between two columns (<code>1fr 1fr</code>).</p>
+
+        <p>When combined with the <code>max-width</code> property as in the previous example, our layout is flexible. It will adjust based on how much space a viewport — browser, tablet, mobile device — can offer.</p>
+      </section>
+
+      <section>
+        <h2>Positioning Content</h2>
+
+        <p>Content on a grid does not have to be confined to a single square on the grid. It can be stretched across or moved to other parts of the grid.</p>
+
+        <p>Identify the element to be moved/stretched. (You may want to apply an id to this element.) Then apply the <code>grid-column</code> or <code>grid-row</code> properties.</p>
+      </section>
+
+      <section>
+        <h2>Positioning Content (cont'd)</h2>
+
+        <pre>#alpha {<br/>  grid-column: 2 / 3;<br/>  grid-row: 1 / 3;<br/>}</pre>
+
+        <p>In this example, we are saying "This element (#alpha) begins at (column) grid line 2 and ends at grid-line 3. Its row starts at (row) grid line 1 and ends at grid-line 3."</p>
+
+        <img src="img/15-positioning-content.svg" alt="Positioning content using grid lines" />
+      </section>
+
+      <section>
+        <h2>Options!</h2>
+
+        <p>Using (positive) grid line numbers is not the only way to position content on a grid. We can:</p>
+
+        <ul>
+          <li>Use negative grid line numbers</li>
+          <li>Use the <code>span</code> keyword to indicate how many columns/rows to stretch</li>
+        </ul>
+
+        <p><small>These options are covered thoroughly in the 02-line-based-positioning example.</small></p>
+      </section>
+
+      <section>
+        <h2>Grid Areas</h2>
+
+        <p>Content can also be positioned on a grid by identifying content as <code>grid-areas</code>, then set up the <code>grid-template-areas</code> property.</p>
+
+        <p><small>This is covered thoroughly in the 05-grid-template-areas example.</small></p>
+      </section>
+
+    </main>
+
+    <footer>
+      <p><a href="index.html">Course Notes</a></p>
+    </footer>
+  </body>
+</html>

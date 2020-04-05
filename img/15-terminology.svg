@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 627.37 446.32" style="enable-background:new 0 0 627.37 446.32;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FCEE21;}
+	.st1{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st2{font-family:sans-serif;}
+	.st3{font-size:12px;}
+</style>
+<rect x="352.37" y="158.82" class="st0" width="254" height="215.5"/>
+<g>
+	<path d="M224.37,66.32v307h-126v-307H224.37 M225.37,65.32h-128v309h128V65.32L225.37,65.32z"/>
+</g>
+<g>
+	<path d="M351.37,66.32v307h-126v-307H351.37 M352.37,65.32h-128v309h128V65.32L352.37,65.32z"/>
+</g>
+<g>
+	<path d="M478.37,66.32v307h-126v-307H478.37 M479.37,65.32h-128v309h128V65.32L479.37,65.32z"/>
+</g>
+<g>
+	<path d="M605.37,66.32v307h-126v-307H605.37 M606.37,65.32h-128v309h128V65.32L606.37,65.32z"/>
+</g>
+<g>
+	<line class="st1" x1="97.87" y1="158.82" x2="606.37" y2="158.82"/>
+</g>
+<g>
+	<line class="st1" x1="98.37" y1="267.82" x2="606.37" y2="267.82"/>
+</g>
+<line class="st1" x1="89.87" y1="66.82" x2="71.87" y2="66.82"/>
+<line class="st1" x1="89.37" y1="158.82" x2="71.37" y2="158.82"/>
+<line class="st1" x1="71.87" y1="66.82" x2="71.37" y2="158.82"/>
+<text transform="matrix(1 0 0 1 7.8274 115.0557)" class="st2 st3">grid row</text>
+<line class="st1" x1="71.87" y1="112.82" x2="53.87" y2="112.82"/>
+<line class="st1" x1="97.87" y1="58.36" x2="97.87" y2="40.36"/>
+<line class="st1" x1="224.37" y1="58.36" x2="224.37" y2="40.36"/>
+<line class="st1" x1="161.37" y1="40.36" x2="161.37" y2="22.36"/>
+<line class="st1" x1="97.87" y1="40.36" x2="224.37" y2="40.36"/>
+<text transform="matrix(1 0 0 1 129.594 15.4009)" class="st2 st3">grid column</text>
+<line class="st1" x1="479.37" y1="59.91" x2="492.03" y2="41.91"/>
+<text transform="matrix(1 0 0 1 495.9036 37.3387)" class="st2 st3">grid line</text>
+<line class="st1" x1="352.37" y1="400.12" x2="352.37" y2="382.12"/>
+<line class="st1" x1="606.37" y1="398.93" x2="606.37" y2="380.93"/>
+<line class="st1" x1="479.37" y1="418.3" x2="479.37" y2="400.3"/>
+<line class="st1" x1="352.37" y1="400.12" x2="606.37" y2="400.12"/>
+<text transform="matrix(1 0 0 1 457.3294 433.4058)" class="st2 st3">grid area</text>
+</svg>
